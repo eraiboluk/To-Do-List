@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\To-Do-List\\ToDo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\todo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:todo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\frontend\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:frontend\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -38,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +54,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\To-Do-List\\ToDo\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-31T14:40:44.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ToDo",
+              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\ToDo.csproj",
+              "RelativeDocumentMoniker": "ToDo.csproj",
+              "ToolTip": "D:\\To-Do-List\\ToDo\\ToDo.csproj",
+              "RelativeToolTip": "ToDo.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-31T14:40:43.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "script.js",
               "DocumentMoniker": "D:\\To-Do-List\\ToDo\\FrontEnd\\script.js",
               "RelativeDocumentMoniker": "FrontEnd\\script.js",
@@ -58,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "D:\\To-Do-List\\ToDo\\FrontEnd\\index.html",
               "RelativeDocumentMoniker": "FrontEnd\\index.html",
@@ -71,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ThisDbContext.cs",
               "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Data\\ThisDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ThisDbContext.cs",
@@ -83,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ToDoItem.cs",
               "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Models\\ToDoItem.cs",
               "RelativeDocumentMoniker": "Models\\ToDoItem.cs",
@@ -95,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -107,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TodoItemsController.cs",
               "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Controllers\\TodoItemsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TodoItemsController.cs",
@@ -119,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ToDo.csproj",
               "DocumentMoniker": "D:\\To-Do-List\\ToDo\\ToDo.csproj",
               "RelativeDocumentMoniker": "ToDo.csproj",
