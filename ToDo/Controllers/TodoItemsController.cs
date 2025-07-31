@@ -39,6 +39,7 @@ namespace ToDo.Controllers
         [HttpPost]
         public async Task<ActionResult<TodoItem>> Create(TodoItem item)
         {
+            item.CreatedAt = DateTime.UtcNow;
             _context.TodoItems.Add(item);
             await _context.SaveChangesAsync();
 
