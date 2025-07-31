@@ -54,8 +54,7 @@
               "RelativeToolTip": "FrontEnd\\script.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-07-31T14:25:56.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T14:25:56.951Z"
             },
             {
               "$type": "Document",
@@ -65,7 +64,7 @@
               "RelativeDocumentMoniker": "FrontEnd\\index.html",
               "ToolTip": "D:\\To-Do-List\\ToDo\\FrontEnd\\index.html",
               "RelativeToolTip": "FrontEnd\\index.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-07-31T14:25:47.327Z",
               "EditorCaption": ""
@@ -80,8 +79,7 @@
               "RelativeToolTip": "Data\\ThisDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T14:25:14.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T14:25:14.072Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "Models\\ToDoItem.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T14:25:12.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T14:25:12.087Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T14:23:30.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T14:23:30.553Z"
             },
             {
               "$type": "Document",
@@ -119,21 +115,19 @@
               "RelativeToolTip": "Controllers\\TodoItemsController.cs",
               "ViewState": "AQIAAC4AAAAAAAAAAAAAwD4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T14:15:03.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T14:15:03.316Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ToDo",
+              "Title": "ToDo.csproj",
               "DocumentMoniker": "D:\\To-Do-List\\ToDo\\ToDo.csproj",
               "RelativeDocumentMoniker": "ToDo.csproj",
               "ToolTip": "D:\\To-Do-List\\ToDo\\ToDo.csproj",
               "RelativeToolTip": "ToDo.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-31T14:14:30.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T14:14:30.191Z"
             }
           ]
         }
