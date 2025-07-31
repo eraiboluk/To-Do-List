@@ -15,14 +15,15 @@
         }
 
         form {
-            display: flex;
+            display: grid;
             gap: 10px;
             margin-bottom: 20px;
         }
 
-        input[type="text"] {
-            flex: 1;
+        input, textarea {
             padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
         }
 
         button {
@@ -48,6 +49,8 @@
 
     <form id="todoForm">
         <input type="text" id="title" placeholder="Task title" required>
+        <textarea id="description" placeholder="Description (optional)"></textarea>
+        <input type="date" id="dueDate">
         <button type="submit">Add Task</button>
     </form>
 
