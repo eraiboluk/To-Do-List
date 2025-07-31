@@ -39,7 +39,10 @@ namespace ToDo.Controllers
         [HttpPost]
         public async Task<ActionResult<TodoItem>> Create(TodoItem item)
         {
-            throw new NotImplementedException();
+            _context.TodoItems.Add(item);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(Get), new { id = item.Id }, item);
         }
 
         // Belirli bir id'ye sahip yapılacaklar listesi öğesini günceller. Öğe bulunamazsa HTTP 404 Not Found, geçersiz veri gelirse HTTP 400 Bad Request yanıtı döndürün.
