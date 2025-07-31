@@ -1,9 +1,53 @@
 ﻿const API_URL = "http://localhost:5037/api/todoitems";
 
 const todoList = document.getElementById("todoList");
+const todoForm = document.getElementById("todoForm");
+const titleInput = document.getElementById("title");
+const descriptionInput = document.getElementById("description");
+const dueDateInput = document.getElementById("dueDate");
 
 document.addEventListener('DOMContentLoaded', function () {
     fetchList();
+    todoForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const title = titleInput.value.trim();
+        const description = descriptionInput.value.trim();
+        const dueDate = dueDateInput.value;
+
+        if (!title) {
+            alert("Title is required.");
+            return;
+        }
+
+        const newTodo = {
+            title,
+            description,
+            dueDate
+        };
+
+        try {
+            const response = await fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newTodo)
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            titleInput.value = "";
+            descriptionInput.value = "";
+            dueDateInput.value = "";
+
+            fetchList();
+        } catch (error) {
+            console.error("Error adding task:", error);
+        }
+    });
 });
 
 async function fetchList() {
