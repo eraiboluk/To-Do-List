@@ -100,9 +100,27 @@ function createTodoElement(todo) {
                     ${todo.description ? `<div class="todo-description">${todo.description}</div>` : ''}
                     <div class="todo-date">${formattedDate}</div>
                 </div>
+                <button class="delete-btn" data-id="${todo.id}">Delete</button>
             </div>
         </div>
     `;
+
+    const deleteButton = listItem.querySelector(".delete-btn");
+    deleteButton.addEventListener("click", async () => {
+        try {
+            const response = await fetch(`${API_URL}/${todo.id}`, {
+                method: "DELETE"
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            fetchList();
+        } catch (error) {
+            console.error(`Error deleting task ${todo.id}:`, error);
+        }
+    });
 
     return listItem;
 }
