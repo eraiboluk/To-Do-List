@@ -75,7 +75,16 @@ namespace ToDo.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            throw new NotImplementedException();
+            var item = await _context.TodoItems.FindAsync(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            _context.TodoItems.Remove(item);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }
