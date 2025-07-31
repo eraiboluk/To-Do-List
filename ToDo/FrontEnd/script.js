@@ -49,32 +49,80 @@ function createTodoElement(todo) {
         'No date specified';
 
     listItem.innerHTML = `
-        <div class="todo-item">
-            <div class="todo-content">
-                <input type="checkbox" class="todo-checkbox" ${todo.isCompleted ? 'checked' : ''} disabled>
-                <div class="todo-info">
-                    <div class="todo-title">${todo.title}</div>
-                    ${todo.description ? `<div class="todo-description">${todo.description}</div>` : ''}
-                    <div class="todo-date">${formattedDate}</div>
-                </div>
-                
-                <div class="todo-actions">
-                    ${todo.isCompleted ?
-                            `<button type="button" class="action-btn undo-btn" onclick="toggleComplete(${todo.id}, false)"> Undo </button>` :
-                            `<button type="button" class="action-btn complete-btn" onclick="toggleComplete(${todo.id}, true)"> Complete </button>`
-                        }
-                    <button type="button" class="action-btn delete-btn" onclick="deleteTodo(${todo.id})"> Delete </button>
-                </div>
+    <div class="todo-item">
+        <div class="todo-content">
+            <input type="checkbox" class="todo-checkbox" ${todo.isCompleted ? 'checked' : ''} disabled>
+            <div class="todo-info">
+                <div class="todo-title">${todo.title}</div>
+                ${todo.description ? `<div class="todo-description">${todo.description}</div>` : ''}
+                <div class="todo-date">${formattedDate}</div>
+            </div>
+            <div class="todo-actions">
+                ${todo.isCompleted ?
+            `<button type="button" class="action-btn undo-btn" onclick="toggleComplete(${todo.id}, false)"> Undo </button>` :
+            `<button type="button" class="action-btn complete-btn" onclick="toggleComplete(${todo.id}, true)"> Complete </button>`} 
+                <button type="button" class="action-btn update-btn" onclick="startUpdate(${todo.id})"> Update </button>
+                <button type="button" class="action-btn delete-btn" onclick="deleteTodo(${todo.id})"> Delete </button>
             </div>
         </div>
-    `;
+    </div>
+`;
 
     return listItem;
 }
 
+// Formu güncelleme moduna sokar
+async function startUpdate(id) {
+    try {
+        const response = await fetch(`${API_URL}/${id}`);
+        if (!response.ok) {
+            throw new Error('Task could not be fetched.');
+        }
+        const todo = await response.json();
+
+        // Formu doldur
+        document.getElementById('updateId').value = todo.id;
+        document.getElementById('title').value = todo.title;
+        document.getElementById('description').value = todo.description || '';
+        // Tarih formatını 'YYYY-MM-DD' olarak ayarla
+        document.getElementById('dueDate').value = todo.dueDate ? todo.dueDate.substring(0, 10) : '';
+
+        // Form başlığını ve butonu güncelle
+        document.getElementById('formTitle').innerText = 'Update Task';
+        document.getElementById('submitBtn').innerText = 'Update Task';
+
+        // Kullanıcıyı forma yönlendir
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    } catch (error) {
+        console.error('Error preparing update:', error);
+    }
+}
+
+// Formu varsayılan "ekleme" moduna döndürür
+function resetFormState() {
+    document.getElementById('updateId').value = '';
+    document.getElementById('formTitle').innerText = 'Add New Task';
+    document.getElementById('submitBtn').innerText = 'Add Task';
+    todoForm.reset();
+}
+
+// Mevcut event listener'ı bu yeni kodla değiştirin
 todoForm.addEventListener('submit', async function (event) {
     event.preventDefault();
 
+    const updateId = document.getElementById('updateId').value;
+
+    // Eğer updateId varsa güncelleme yap, yoksa yeni görev ekle
+    if (updateId) {
+        await handleUpdate(updateId);
+    } else {
+        await handleAdd();
+    }
+});
+
+// Yeni görev ekleme mantığı
+async function handleAdd() {
     try {
         const title = document.getElementById('title').value.trim();
         const description = document.getElementById('description').value.trim();
@@ -94,23 +142,51 @@ todoForm.addEventListener('submit', async function (event) {
 
         const response = await fetch(API_URL, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(todoData)
         });
 
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-        todoForm.reset();
+        resetFormState();
         await fetchList();
 
     } catch (error) {
         console.error('Error adding task:', error);
     }
-});
+}
+
+// Görev güncelleme mantığı
+async function handleUpdate(id) {
+    try {
+        // Backend tutarlılığı için güncel veriyi çekelim
+        const getResponse = await fetch(`${API_URL}/${id}`);
+        if (!getResponse.ok) throw new Error('Could not fetch task to update.');
+        const currentTodo = await getResponse.json();
+
+        // Formdan gelen yeni verilerle nesneyi güncelle
+        const updatedTodo = {
+            ...currentTodo, // id, isCompleted, createdAt gibi diğer alanları koru
+            title: document.getElementById('title').value.trim(),
+            description: document.getElementById('description').value.trim() || null,
+            dueDate: document.getElementById('dueDate').value || null
+        };
+
+        const putResponse = await fetch(`${API_URL}/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(updatedTodo)
+        });
+
+        if (!putResponse.ok) throw new Error(`HTTP ${putResponse.status}`);
+
+        resetFormState();
+        await fetchList();
+
+    } catch (error) {
+        console.error('Error updating task:', error);
+    }
+}
 
 async function toggleComplete(id, isCompleted) {
     try {

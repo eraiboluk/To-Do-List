@@ -220,6 +220,15 @@
             .undo-btn:hover {
                 background: #e0a800;
             }
+        .update-btn 
+        {
+            background: #007bff;
+            color: white;
+        }
+
+            .update-btn:hover {
+                background: #0056b3;
+            }
 
         .delete-btn {
             background: #dc3545;
@@ -301,12 +310,12 @@
         </div>
 
         <div class="form-section">
-            <h2 class="form-title">Add New Task</h2>
+            <h2 class="form-title" id="formTitle">Add New Task</h2> <div id="messageContainer"></div>
 
             <div id="messageContainer"></div>
 
             <form id="todoForm">
-                <div class="form-group">
+                <input type="hidden" id="updateId">  <div class="form-group">
                     <label for="title">Task Title *</label>
                     <input type="text" id="title" name="title" required placeholder="Enter task title">
                 </div>
@@ -321,7 +330,7 @@
                     <input type="date" id="dueDate" name="dueDate">
                 </div>
 
-                <button type="submit" class="submit-btn">Add Task</button>
+                <button type="submit" class="submit-btn" id="submitBtn">Add Task</button>
             </form>
         </div>
 
