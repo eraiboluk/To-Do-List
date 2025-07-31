@@ -17,7 +17,7 @@ namespace ToDo.Controllers
 
         // Tüm yapılacaklar listesi öğelerini getirir.
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItem>>> GetAll()
+        public ActionResult<IEnumerable<TodoItem>> GetAll()
         {
             var items = _context.TodoItems.ToList();
             return Ok(items);
