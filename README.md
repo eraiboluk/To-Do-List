@@ -1,6 +1,6 @@
 # ToDo List Uygulaması
 
-Bu proje, yapılacaklar listesi yönetimi için geliştirilmiş basit bir tam yığın web uygulamasıdır. Arka uç ASP.NET Core Web API ile, ön uç ise HTML/CSS ve JavaScript kullanılarak yazılmıştır.
+Yapılacaklar listesi yönetimi. Arka uç ASP.NET Core Web API ile, ön uç ise HTML/CSS ve JavaScript kullanılarak yazılmıştır.
 
 ## Teknolojiler
 
@@ -51,7 +51,7 @@ Bu proje, yapılacaklar listesi yönetimi için geliştirilmiş basit bir tam y�
 
 - Complete tuşuna basıldığında görev tamamlanır.
 - Backend tarafında `isCompleted = true` olarak güncellenir.
-- "Undo" butonu ile işlem geri alınabilir.
+- Undo butonu ile işlem geri alınabilir.
 
 **Görsel:**
 - ![Görev Tamamlama](Images/4.png)
