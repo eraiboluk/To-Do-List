@@ -71,7 +71,6 @@ function createTodoElement(todo) {
     return listItem;
 }
 
-// Formu güncelleme moduna sokar
 async function startUpdate(id) {
     try {
         const response = await fetch(`${API_URL}/${id}`);
@@ -80,18 +79,14 @@ async function startUpdate(id) {
         }
         const todo = await response.json();
 
-        // Formu doldur
         document.getElementById('updateId').value = todo.id;
         document.getElementById('title').value = todo.title;
         document.getElementById('description').value = todo.description || '';
-        // Tarih formatını 'YYYY-MM-DD' olarak ayarla
         document.getElementById('dueDate').value = todo.dueDate ? todo.dueDate.substring(0, 10) : '';
 
-        // Form başlığını ve butonu güncelle
         document.getElementById('formTitle').innerText = 'Update Task';
         document.getElementById('submitBtn').innerText = 'Update Task';
 
-        // Kullanıcıyı forma yönlendir
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
     } catch (error) {
@@ -99,7 +94,6 @@ async function startUpdate(id) {
     }
 }
 
-// Formu varsayılan "ekleme" moduna döndürür
 function resetFormState() {
     document.getElementById('updateId').value = '';
     document.getElementById('formTitle').innerText = 'Add New Task';
@@ -107,13 +101,11 @@ function resetFormState() {
     todoForm.reset();
 }
 
-// Mevcut event listener'ı bu yeni kodla değiştirin
 todoForm.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const updateId = document.getElementById('updateId').value;
 
-    // Eğer updateId varsa güncelleme yap, yoksa yeni görev ekle
     if (updateId) {
         await handleUpdate(updateId);
     } else {
@@ -121,7 +113,6 @@ todoForm.addEventListener('submit', async function (event) {
     }
 });
 
-// Yeni görev ekleme mantığı
 async function handleAdd() {
     try {
         const title = document.getElementById('title').value.trim();
@@ -156,17 +147,14 @@ async function handleAdd() {
     }
 }
 
-// Görev güncelleme mantığı
 async function handleUpdate(id) {
     try {
-        // Backend tutarlılığı için güncel veriyi çekelim
         const getResponse = await fetch(`${API_URL}/${id}`);
         if (!getResponse.ok) throw new Error('Could not fetch task to update.');
         const currentTodo = await getResponse.json();
 
-        // Formdan gelen yeni verilerle nesneyi güncelle
         const updatedTodo = {
-            ...currentTodo, // id, isCompleted, createdAt gibi diğer alanları koru
+            ...currentTodo,
             title: document.getElementById('title').value.trim(),
             description: document.getElementById('description').value.trim() || null,
             dueDate: document.getElementById('dueDate').value || null
