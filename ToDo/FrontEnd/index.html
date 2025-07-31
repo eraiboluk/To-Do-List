@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: sans-serif;
-            background: #f4f4f4;
-            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4184ff, #2ac4df);
+            padding: 30px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
         }
 
         h1 {
@@ -16,18 +32,24 @@
 
         form {
             display: grid;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
         input, textarea {
-            padding: 10px;
-            border-radius: 4px;
+            padding: 12px;
             border: 1px solid #ccc;
+            border-radius: 6px;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px;
+            background: #4facfe;
+            border: none;
+            color: white;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
         }
 
         ul {
@@ -36,25 +58,27 @@
         }
 
         li {
-            background: white;
-            padding: 10px;
+            background: #f9f9f9;
             margin-bottom: 10px;
-            border-radius: 4px;
+            padding: 15px;
+            border-radius: 6px;
         }
     </style>
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <p>Organize and track your tasks</p>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <p>Organize and track your tasks</p>
 
-    <form id="todoForm">
-        <input type="text" id="title" placeholder="Task title" required>
-        <textarea id="description" placeholder="Description (optional)"></textarea>
-        <input type="date" id="dueDate">
-        <button type="submit">Add Task</button>
-    </form>
+        <form id="todoForm">
+            <input type="text" id="title" placeholder="Task title" required>
+            <textarea id="description" placeholder="Description (optional)"></textarea>
+            <input type="date" id="dueDate">
+            <button type="submit">Add Task</button>
+        </form>
 
-    <ul id="todoList"></ul>
+        <ul id="todoList"></ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
