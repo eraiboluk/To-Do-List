@@ -19,7 +19,8 @@ namespace ToDo.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetAll()
         {
-            throw new NotImplementedException();
+            var items = _context.TodoItems.ToList();
+            return Ok(items);
         }
 
         // Belirli bir id'ye sahip yapılacaklar listesi öğesini getirir. Öğe bulunamazsa uygun bir HTTP 404 Not Found yanıtı döndürün.
