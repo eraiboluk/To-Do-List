@@ -50,7 +50,16 @@ namespace ToDo.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, TodoItem updatedItem)
         {
+            if (id != updatedItem.Id)
+            {
+                return BadRequest();
+            }
+
             var existingItem = await _context.TodoItems.FindAsync(id);
+            if (existingItem == null)
+            {
+                return NotFound();
+            }
 
             existingItem.Title = updatedItem.Title;
             existingItem.Description = updatedItem.Description;
