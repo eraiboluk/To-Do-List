@@ -7,7 +7,7 @@ Yapılacaklar listesi yönetimi. Arka uç ASP.NET Core Web API ile, ön uç ise 
 **Backend:**
 - ASP.NET Core Web API  
 - Entity Framework Core  
-- SQLite (SQL Server yerine tercih edilmiştir çünkü bellekte aşırı yüklenmeye neden olmuştur.)
+- SQLite (SQL Server yerine tercih edilmiştir çünkü çalışırken sıkça bellek yetersizliğine neden olmuştur.)
 
 **Frontend:**
 - HTML / CSS  
