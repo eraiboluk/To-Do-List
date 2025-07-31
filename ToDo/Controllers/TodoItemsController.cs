@@ -27,7 +27,12 @@ namespace ToDo.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<TodoItem>> Get(int id)
         {
-            throw new NotImplementedException();
+            var item = await _context.TodoItems.FindAsync(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return Ok(item);
         }
 
         // Yeni bir yapılacaklar listesi öğesi oluşturur. Başarılı olursa HTTP 201 Created yanıtı ile oluşturulan öğeyi ve konumunu (Location header) döndürün.
