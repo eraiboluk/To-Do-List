@@ -50,7 +50,16 @@ namespace ToDo.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, TodoItem updatedItem)
         {
-            throw new NotImplementedException();
+            var existingItem = await _context.TodoItems.FindAsync(id);
+
+            existingItem.Title = updatedItem.Title;
+            existingItem.Description = updatedItem.Description;
+            existingItem.IsCompleted = updatedItem.IsCompleted;
+            existingItem.DueDate = updatedItem.DueDate;
+
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
 
         // Belirli bir id'ye sahip yapılacaklar listesi öğesini siler. Öğe başarıyla silinirse HTTP 204 No Content yanıtı döndürün. Öğe bulunamazsa HTTP 404 Not Found yanıtı döndürün.
