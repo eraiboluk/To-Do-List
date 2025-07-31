@@ -49,7 +49,7 @@ Bu proje, yapılacaklar listesi yönetimi için geliştirilmiş basit bir tam y�
 
 ### 2. Görev Tamamlama
 
-- Checkbox'a tıklanarak görev tamamlanır.
+- Complete tuşuna basıldığında görev tamamlanır.
 - Backend tarafında `isCompleted = true` olarak güncellenir.
 - "Undo" butonu ile işlem geri alınabilir.
 
@@ -60,7 +60,7 @@ Bu proje, yapılacaklar listesi yönetimi için geliştirilmiş basit bir tam y�
 
 ### 3. Görev Silme
 
-- Sil butonuna basıldığında sistem onay ister.
+- Delete butonuna basıldığında sistem onay ister.
 - Evet denirse görev kalıcı olarak silinir (geri alınamaz).
 
 **Görseller:**
@@ -71,7 +71,7 @@ Bu proje, yapılacaklar listesi yönetimi için geliştirilmiş basit bir tam y�
 
 ### 4. Görev Güncelleme
 
-- "Update" butonuna basıldığında görev bilgileri forma yüklenir.
+- Update butonuna basıldığında görev bilgileri forma yüklenir.
 - Değişiklik yapılır ve "Update Task" butonuna tıklanarak görev güncellenir.
 
 **Görseller:**
