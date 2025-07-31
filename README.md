@@ -1,37 +1,105 @@
-ToDo List Application
-Bir yapılacaklar listesi uygulaması. .NET Core Web API backend'i ve vanilla JavaScript frontend'i ile geliştirilmiştir.
+# ToDo List Uygulaması
 
-Backend: ASP.NET Core Web API
-Veritabanı: Entity Framework Core ve SQLite(SQL server proje yapılırken bellek yetersizliğine yol açtığı için tercih edilmedi)
+Bu proje, yapılacaklar listesi yönetimi için geliştirilmiş basit bir tam yığın web uygulamasıdır. Arka uç ASP.NET Core Web API ile, ön uç ise HTML/CSS ve JavaScript kullanılarak yazılmıştır.
 
-Frontend HTML/CSS/Vanilla JS
+## Teknolojiler
 
-Özellikler
-Görev ekleme, güncelleme ve silme
-Görev tamamlama/geri alma
-Son tarih belirleme
+**Backend:**
+- ASP.NET Core Web API  
+- Entity Framework Core  
+- SQLite (SQL Server yerine tercih edilmiştir çünkü bellekte aşırı yüklenmeye neden olmuştur.)
 
-## Tests
+**Frontend:**
+- HTML / CSS  
+- Vanilla JavaScript  
 
-This project includes unit tests for the `TodoItemsController` class to verify the correctness of key API endpoints.
+## Özellikler
 
-### Tested Endpoints
+- Görev ekleme, silme, güncelleme  
+- Görev tamamlama ve geri alma  
+- Son tarih belirleme
 
-- **POST /api/todoitems**  
-  Ensures that a new to-do item can be created successfully and saved to the database.
+## Projeyi Çalıştırma
 
-- **PUT /api/todoitems/{id}**
-  - Returns `204 NoContent` if the item is updated successfully.
-  - Returns `404 NotFound` if the item with the given ID does not exist.
+### 1. Backend
 
-### Frameworks
+- Bu repoyu klonlayın.
+- Bağımlılıkları yükleyin.
+- API'yi çalıştırın.
 
-- `xUnit` – Unit testing framework  
-- `Microsoft.EntityFrameworkCore.InMemory` – In-memory database provider for Entity Framework Core  
-- `Microsoft.AspNetCore.Mvc` – Controller result types  
-- `Moq` – Referenced but not used in this context, as mocking was not necessary
+### 2. Frontend
 
-### Notes
+- `index.html` dosyasını Visual Studio Live Server eklentisi ile çalıştırabilirsiniz.
+- Alternatif olarak dosyayı doğrudan bir tarayıcıda açabilirsiniz.
 
-- All tests are isolated using separate in-memory databases for each case.
-- The controller directly uses `DbContext`, so mocking with Moq was not needed.
+## Kullanım
+
+### 1. Görev Oluşturma
+
+- Başlık girin.  
+- (İsteğe bağlı) Açıklama ve son tarih girin.  
+- "Add Task" butonuna tıklayın.
+
+**Görseller:**
+- ![Görev Oluşturma 1](Images/1.png)
+- ![Görev Oluşturma 2](Images/2.png)
+- ![Görev Oluşturma 3](Images/3.png)
+
+---
+
+### 2. Görev Tamamlama
+
+- Checkbox'a tıklanarak görev tamamlanır.
+- Backend tarafında `isCompleted = true` olarak güncellenir.
+- "Undo" butonu ile işlem geri alınabilir.
+
+**Görsel:**
+- ![Görev Tamamlama](Images/4.png)
+
+---
+
+### 3. Görev Silme
+
+- Sil butonuna basıldığında sistem onay ister.
+- Evet denirse görev kalıcı olarak silinir (geri alınamaz).
+
+**Görseller:**
+- ![Görev Silme 1](Images/5.png)
+- ![Görev Silme 2](Images/6.png)
+
+---
+
+### 4. Görev Güncelleme
+
+- "Update" butonuna basıldığında görev bilgileri forma yüklenir.
+- Değişiklik yapılır ve "Update Task" butonuna tıklanarak görev güncellenir.
+
+**Görseller:**
+- ![Güncelleme 1](Images/7.png)
+- ![Güncelleme 2](Images/8.png)
+- ![Güncelleme 3](Images/9.png)
+
+---
+
+## Testler
+
+### API Testleri
+
+- `POST /api/todoitems`  
+  - Yeni görev başarıyla oluşturulur ve veritabanına kaydedilir.
+
+- `PUT /api/todoitems/{id}`  
+  - Başarı durumunda `204 NoContent` döner.  
+  - Geçersiz ID durumunda `404 NotFound` döner.
+
+### Kullanılan Test Araçları
+
+- `xUnit` – Birim testleri için test framework’ü  
+- `Microsoft.EntityFrameworkCore.InMemory` – Bellek içi veritabanı sağlayıcısı  
+- `Microsoft.AspNetCore.Mvc` – Controller yanıt türleri  
+- `Moq` – Projeye dahil edilmiştir fakat bu projede kullanılmamıştır
+
+### Notlar
+
+- Tüm testler bağımsız çalışır. Her testte ayrı bir in-memory veritabanı kullanılır.  
+- Controller sınıfları doğrudan `DbContext` kullanır, bu nedenle Moq ile sahte nesne üretimine gerek kalmamıştır.
