@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\To-Do-List\\ToDo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\frontend\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:frontend\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\frontend\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:frontend\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\controllers\\todoitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:controllers\\todoitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\data\\thisdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,16 +23,12 @@
       "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|d:\\to-do-list\\todo\\todo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{FD94DB0E-FA08-4182-B4F6-8622A3A62C7A}|ToDo.csproj|solutionrelative:todo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,77 +47,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ThisDbContext.cs",
-              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Data\\ThisDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ThisDbContext.cs",
-              "ToolTip": "D:\\To-Do-List\\ToDo\\Data\\ThisDbContext.cs",
-              "RelativeToolTip": "Data\\ThisDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:54:22.596Z",
+              "Title": "script.js",
+              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\FrontEnd\\script.js",
+              "RelativeDocumentMoniker": "FrontEnd\\script.js",
+              "ToolTip": "D:\\To-Do-List\\ToDo\\FrontEnd\\script.js",
+              "RelativeToolTip": "FrontEnd\\script.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-31T14:25:56.951Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ToDoItem.cs",
-              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Models\\ToDoItem.cs",
-              "RelativeDocumentMoniker": "Models\\ToDoItem.cs",
-              "ToolTip": "D:\\To-Do-List\\ToDo\\Models\\ToDoItem.cs",
-              "RelativeToolTip": "Models\\ToDoItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:52:45.296Z",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\FrontEnd\\index.html",
+              "RelativeDocumentMoniker": "FrontEnd\\index.html",
+              "ToolTip": "D:\\To-Do-List\\ToDo\\FrontEnd\\index.html",
+              "RelativeToolTip": "FrontEnd\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-31T14:25:47.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\To-Do-List\\ToDo\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-31T13:45:37.117Z",
+              "Title": "ThisDbContext.cs",
+              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Data\\ThisDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ThisDbContext.cs",
+              "ToolTip": "D:\\To-Do-List\\ToDo\\Data\\ThisDbContext.cs",
+              "RelativeToolTip": "Data\\ThisDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T14:25:14.072Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\To-Do-List\\ToDo\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "Title": "ToDoItem.cs",
+              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Models\\ToDoItem.cs",
+              "RelativeDocumentMoniker": "Models\\ToDoItem.cs",
+              "ToolTip": "D:\\To-Do-List\\ToDo\\Models\\ToDoItem.cs",
+              "RelativeToolTip": "Models\\ToDoItem.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:45:32.519Z"
+              "WhenOpened": "2025-07-31T14:25:12.087Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\To-Do-List\\ToDo\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-31T13:45:24.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\To-Do-List\\ToDo\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T13:45:20.855Z",
+              "WhenOpened": "2025-07-31T14:23:30.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TodoItemsController.cs",
+              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\Controllers\\TodoItemsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TodoItemsController.cs",
+              "ToolTip": "D:\\To-Do-List\\ToDo\\Controllers\\TodoItemsController.cs",
+              "RelativeToolTip": "Controllers\\TodoItemsController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T14:15:03.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ToDo",
+              "DocumentMoniker": "D:\\To-Do-List\\ToDo\\ToDo.csproj",
+              "RelativeDocumentMoniker": "ToDo.csproj",
+              "ToolTip": "D:\\To-Do-List\\ToDo\\ToDo.csproj",
+              "RelativeToolTip": "ToDo.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-31T14:14:30.191Z",
               "EditorCaption": ""
             }
           ]
